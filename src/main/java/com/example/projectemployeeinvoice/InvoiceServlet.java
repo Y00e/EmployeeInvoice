@@ -37,10 +37,15 @@ public class InvoiceServlet extends HttpServlet {
             List<Payment> payments = paymentDAO.getPaymentsByEmployeeId(employee.getId());
             PrintWriter out = response.getWriter();
 
+            response.setContentType("text/html");
+
            for (Payment payment : payments) {
-               out.println(" Title: " + payment.getTitle() + " Date: " + payment.getDate() + " description: " + payment.getDescription() + " category: " + payment.getCategory() + " price: " + payment.getPrice() + " employee_Id: " + payment.getEmployeeId());
+               out.println(" Title: " + payment.getTitle() + " Date: " + payment.getDate() + " description: " + payment.getDescription() + " category: " + payment.getCategory() + " price: " + payment.getPrice() + " employee_Id: " + payment.getEmployeeId() + "<br>");
            }
 
+
+
+            out.println("<a href='payment.jsp'>Go to Payment</a>");
 
             request.setAttribute("payments", payments);
             request.getRequestDispatcher("/InvoiceServlet").forward(request, response);
