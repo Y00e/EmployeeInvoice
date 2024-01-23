@@ -6,10 +6,6 @@
 <body>
 <h2>Login</h2>
 
-<% if (request.getAttribute("errorMessage") != null) { %>
-<p><%= request.getAttribute("errorMessage") %></p>
-<% } %>
-
 <form action="/login" method="post">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>
