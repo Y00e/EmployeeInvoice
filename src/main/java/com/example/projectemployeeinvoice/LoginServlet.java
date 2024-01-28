@@ -27,10 +27,8 @@ public class LoginServlet extends HttpServlet {
             Employee employee3 = new Employee("username3", "password3");
             Employee employee4 = new Employee("username4", "password4");
 
-            //employeeDAO.addEmployee(employee1);
-            //employeeDAO.addEmployee(employee2);
-            //employeeDAO.addEmployee(employee3);
-            //employeeDAO.addEmployee(employee4);
+
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
