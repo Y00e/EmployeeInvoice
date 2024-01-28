@@ -45,8 +45,7 @@ public class LoginServlet extends HttpServlet {
                 // Användaren är inloggad
                 HttpSession session = request.getSession();
                 session.setAttribute("name", employee);
-                response.sendRedirect(request.getContextPath() + "/InvoiceServlet");  // Antag att invoice.jsp är din Invoice page
-            } else {
+                response.sendRedirect(request.getContextPath() + "/InvoiceServlet"); 
                 // Ogiltigt användarnamn eller lösenord
                 request.setAttribute("errorMessage", "Invalid username or password");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
