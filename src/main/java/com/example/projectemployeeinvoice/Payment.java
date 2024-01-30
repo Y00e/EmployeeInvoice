@@ -15,30 +15,6 @@ public class Payment {
     private int employeeId;
 
 
-    // Standardkonstruktor
-    public Payment() {
-    }
-    // Konstruktor för att skapa en Payment baserat på data från databasen
-    public Payment(int id, String title, Date date, String description, String category, double price, int employeeId) {
-        this.id = id;
-        this.title = title;
-        this.date = date;
-        this.description = description;
-        this.category = category;
-        this.price = price;
-        this.employeeId = employeeId;
-    }
-
-    // Konstruktor för att skapa en ny Payment som ska läggas till i databasen
-    public Payment(String title, Date date, String description, String category, double price, int employeeId) {
-        this.title = title;
-        this.date = date;
-        this.description = description;
-        this.category = category;
-        this.price = price;
-        this.employeeId = employeeId;
-    }
-
 
     // getters
     public int getId() {
