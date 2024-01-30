@@ -8,7 +8,7 @@ import java.util.Date;
 public class Payment {
     private int id;
     private String title;
-    private Date date;
+    private String date;
     private String description;
     private String category;
     private double price;
@@ -26,7 +26,7 @@ public class Payment {
         return title;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -55,7 +55,7 @@ public class Payment {
         this.title = title;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Stirng date) {
         this.date = date;
     }
 
