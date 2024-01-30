@@ -55,7 +55,7 @@ public class Payment {
         this.title = title;
     }
 
-    public void setDate(Stirng date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
