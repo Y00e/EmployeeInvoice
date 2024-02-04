@@ -4,14 +4,20 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Login</h2>
 
-<form action="/login" method="post">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <input type="submit" value="Login">
+<form method="POST" action="/auth/login">
+    <label>Username</label>
+    <input type="text" name="username"/>
+
+    <br>
+
+    <label>Password</label>
+    <input type="password" name="password"/>
+
+    <p>${param.error}</p> <!-- ETL -->
+
+    <button>Login</button>
 </form>
+
 </body>
 </html>
