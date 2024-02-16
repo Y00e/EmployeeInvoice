@@ -9,30 +9,28 @@ public class InvoiceService {
 
 
 
-    // Inne i service hanteras vanligen undantag och fel i den in eller ut data som skickas eller tas emot
 
+    private InvoiceRepository invoiceRepository = new InvoiceRepository();
 
-        private InvoiceRepository invoiceRepository = new InvoiceRepository();
+    public List<PaymentEntry> getAll() {
+        return invoiceRepository.getAll();
+    }
 
-        public List<PaymentEntry> getAll() {
-            return invoiceRepository.getAll();
-        }
-
-        public PaymentEntry get(int id) {
+    public PaymentEntry get(int id) {
         return invoiceRepository.get(id);
-        }
+    }
 
-        public void create(String title, String date, String description, String category, double price, int employee_id) {
-        invoiceRepository.create(title, date, description, category, price, employee_id);
-        }
+    public void create(String title, String date, String description, String category, double price, int employeeId) {
+        invoiceRepository.create(title, date, description, category, price, employeeId);
+    }
 
-         public void delete(int id) {
+    public void delete(int id) {
         invoiceRepository.delete(id);
-        }
+    }
 
-         public PaymentEntry update(PaymentEntry entry) {
+    public PaymentEntry update(PaymentEntry entry) {
         invoiceRepository.update(entry);
         return invoiceRepository.get(entry.getId());
-         }
+    }
 
 }
