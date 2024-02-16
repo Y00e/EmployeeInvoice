@@ -35,7 +35,7 @@ public class PaymentServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             for(PaymentEntry entry : entries) {
                 out.println("<br>Title:" + entry.getTitle() + "<br>Date:" + entry.getDate() + "<br>Description:" + entry.getDescription()
-                        + "<br>Category:" + entry.getCategory() + "<br>Dare:" + entry.getPrice() + "<br>EmployeeId:" + entry.getEmployeeId());
+                        + "<br>Category:" + entry.getCategory() + "<br>Price:" + entry.getPrice() + "<br>EmployeeId:" + entry.getEmployeeId() + "<br>");
             }
         }
     }
@@ -80,4 +80,6 @@ public class PaymentServlet extends HttpServlet {
             resp.sendRedirect(req.getServletPath());
         }
     }
+
+
 }
